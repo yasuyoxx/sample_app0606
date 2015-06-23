@@ -133,6 +133,20 @@ aside {
       line-height: 1;
     }
     h1 {
+      
+      /* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
       font-size: 1.4em;
       text-align: left;
       letter-spacing: -1px;
@@ -145,4 +159,18 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+/* forms */
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .form-group;
+  @extend .has-error;
+  margin-bottom: 0;
 }
